@@ -1,0 +1,41 @@
+{
+  "name": "pippo-baudo-viewer",
+  "displayName": "Pippo Baudo Viewer",
+  "description": "Un'estensione che mostra una foto di Pippo Baudo nella barra laterale",
+  "version": "1.0.0",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:pippoBaudoView"
+  ],
+  "main": "./extension.js",
+  "icon": "./media/icon.svg",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pippoBaudoContainer",
+          "title": "Pippo Baudo",
+          "icon": "$(smiley)"
+        }
+      ]
+    },
+    "views": {
+      "pippoBaudoContainer": [
+        {
+          "type": "webview",
+          "id": "pippoBaudoView",
+          "name": "Il Maestro"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
